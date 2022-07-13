@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: hsl(218, 23%, 16%);
+  font-family: 'Poppins', sans-serif;
+}
+
+img{
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+@media (min-width: 1024px) {
+
+  .mobile-image{
+    display: none;
+  }
+
+
+  .button{
+    left: 46.9%;
+  }
+
+  .card{
+    inline-size: 50%;
+    margin-inline-start: 25rem;
+    margin-block-start: 13rem;
+  }
+
+}
+
+@media (max-width: 1023px) {
+
+  .desktop-image{
+    display: none;
+  }
+
+  .button{
+    left: 42.6%;
+  }
+
+  .card{
+    inline-size: 90%;
+    margin-inline-start: 1.5rem;
+    margin-block-start: 5rem;
+  }
+
+}
+
+.card{
+  position: relative;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 13px;
+  padding: 30px;
+}
+
+.heading{
+  color: hsl(150, 100%, 66%);
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+.advice{
+  color: hsl(193, 38%, 86%);
+}
+
+.button{
+  position: absolute;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 100%;
+  inline-size: 50px;
+  block-size: 50px;
+  text-align: center;
+  padding: 12px 5px 0px 5px;
+}
+
+.pattern-divider{
+  text-align: center;
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+}
+
+.attribution{
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a{
+  color: hsl(228, 45%, 44%);
+}
