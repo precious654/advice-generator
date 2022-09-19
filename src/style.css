@@ -14,6 +14,55 @@ img{
   block-size: auto;
 }
 
+.heading{
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  color: hsl(150, 100%, 66%);
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+.card{
+  position: relative;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 13px;
+  padding: 30px;
+}
+
+.advice{
+  color: hsl(193, 38%, 86%);
+  text-align: center;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+}
+
+.button{
+  position: absolute;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 100%;
+  inline-size: 50px;
+  block-size: 50px;
+  text-align: center;
+  padding: 12px 5px 0px 5px;
+}
+
+.pattern-divider{
+  text-align: center;
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+}
+
+.attribution{
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a{
+  color: hsl(228, 45%, 44%);
+}
+
+
 @media (min-width: 1024px) {
 
   .mobile-image{
@@ -49,46 +98,4 @@ img{
     margin-block-start: 5rem;
   }
 
-}
-
-.card{
-  position: relative;
-  background-color: hsl(217, 19%, 24%);
-  border-radius: 13px;
-  padding: 30px;
-}
-
-.heading{
-  color: hsl(150, 100%, 66%);
-  text-align: center;
-  margin-block-end: 1rem;
-}
-
-.advice{
-  color: hsl(193, 38%, 86%);
-}
-
-.button{
-  position: absolute;
-  background-color: hsl(150, 100%, 66%);
-  border-radius: 100%;
-  inline-size: 50px;
-  block-size: 50px;
-  text-align: center;
-  padding: 12px 5px 0px 5px;
-}
-
-.pattern-divider{
-  text-align: center;
-  margin-block-start: 2rem;
-  margin-block-end: 1rem;
-}
-
-.attribution{
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a{
-  color: hsl(228, 45%, 44%);
 }

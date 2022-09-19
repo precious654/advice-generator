@@ -5,13 +5,23 @@ import patterndivider from "./images/pattern-divider-mobile.svg";
 
 function Card() {
 
-  let count = 235;
+  let[adviceCount, setAdviceCount] = React.useState(1);
 
-  let advice = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  let[advice, setAdvice] = React.useState("")
+
+  React.useEffect( () => {
+    fetch('https://api.adviceslip.com/advice')
+    .then( (response) => response.json() )
+    .then( (data) => setAdvice(data.slip.advice) )
+  }, [adviceCount] );
+
+  function handleCount() {
+    setAdviceCount( (prevState) => prevState + 1)
+  }
 
   return (
     <div className="card">
-      <p className="heading">Advice #{count}</p>
+      <p className="heading">Advice #<span>{adviceCount}</span></p>
       <h3 className="advice">"{advice}"</h3>
 
       <div className="pattern-divider">
@@ -19,7 +29,7 @@ function Card() {
         <img src={patterndivider} alt="icon" className="mobile-image" />
       </div>
 
-      <div className="button">
+      <div className="button" onClick={handleCount}>
         <img src={dice} alt="icon" className="icon" />
       </div>
     </div>
